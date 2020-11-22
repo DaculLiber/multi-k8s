@@ -12,6 +12,8 @@ spec:
       labels:
         component: server
     spec:
+      imagePullSecrets:
+        - name: secret-docker
       containers:
         - name: server
           image: dacul/multi-server
@@ -34,5 +36,5 @@ spec:
               valueFrom:
                   secretKeyRef:
                     name: pgpassword
-                    key: PGPASSWORD
+                    key: password
 

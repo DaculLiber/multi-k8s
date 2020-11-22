@@ -12,6 +12,8 @@ spec:
       labels:
         component: redis
     spec:
+      imagePullSecrets:
+        - name: secret-docker
       containers:
         - name: redis
           image: redis

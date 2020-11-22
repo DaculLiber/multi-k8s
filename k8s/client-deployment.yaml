@@ -12,6 +12,8 @@ spec:
       labels:
         component: web
     spec:
+      imagePullSecrets:
+        - name: secret-docker
       containers:
         - name: client
           image: dacul/multi-client

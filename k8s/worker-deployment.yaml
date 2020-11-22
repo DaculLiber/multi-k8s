@@ -12,6 +12,8 @@ spec:
       labels:
         component: worker
     spec:
+      imagePullSecrets:
+        - name: secret-docker
       containers:
         - name: worker
           image: dacul/multi-worker

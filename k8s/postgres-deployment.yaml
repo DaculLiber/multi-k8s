@@ -12,6 +12,8 @@ spec:
       labels:
         component: postgres
     spec:
+      imagePullSecrets:
+        - name: secret-docker
       volumes:
         - name: postgres-storage
           persistentVolumeClaim:
@@ -30,4 +32,4 @@ spec:
               valueFrom:
                   secretKeyRef:
                     name: pgpassword
-                    key: PGPASSWORD
+                    key: password
